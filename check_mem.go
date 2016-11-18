@@ -21,13 +21,13 @@ func main() {
 	total := v.Total >> 30
 	free := v.Free >> 30
 	if v.UsedPercent > w && v.UsedPercent < c {
-		fmt.Printf("Total:%vG, Free:%vG, UsedPercent:%f%% | Free=%d;%d;0;%v", total, free, v.UsedPercent, w, c, total)
+		fmt.Printf("Total:%vG, Free:%vG, UsedPercent:%f%% | UsedPercent=%f;%f;0;100", total, free, v.UsedPercent, w, c)
 		os.Exit(1)
 	} else if v.UsedPercent > c {
-		fmt.Printf("Total:%vG, Free:%vG, UsedPercent:%f%% | Free=%f;%f;0;%v", total, free, v.UsedPercent, w, c, total)
+		fmt.Printf("Total:%vG, Free:%vG, UsedPercent:%f%% | UsedPercent=%f;%f;0;100", total, free, v.UsedPercent, w, c)
 		os.Exit(2)
 	} else {
-		fmt.Printf("Total:%vG, Free:%vG, UsedPercent:%f%% | Free=%f;%f;0;%v", total, free, v.UsedPercent, w, c, total)
+		fmt.Printf("Total:%vG, Free:%vG, UsedPercent:%f%% | UsedPercent=%f;%f;0;100", total, free, v.UsedPercent, w, c)
 		os.Exit(0)
 	}
 }
