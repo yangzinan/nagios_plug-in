@@ -18,16 +18,16 @@ func main() {
 	w, _ := strconv.ParseFloat(argv[1], 64)
 	c, _ := strconv.ParseFloat(argv[2], 64)
 	v, _ := mem.VirtualMemory()
-	total := v.Total >> 30
-	free := v.Free >> 30
+	total := v.Total >> 20
+	free := v.Free >> 20
 	if v.UsedPercent > w && v.UsedPercent < c {
-		fmt.Printf("Total:%vG, Free:%vG, UsedPercent:%f%% | UsedPercent=%f;%f;0;100", total, free, v.UsedPercent, w, c)
+		fmt.Printf("WARNING - Total:%vM, Free:%vM, UsedPercent:%f%% | UsedPercent=%f;%f;0;100\n", total, free, v.UsedPercent, w, c)
 		os.Exit(1)
 	} else if v.UsedPercent > c {
-		fmt.Printf("Total:%vG, Free:%vG, UsedPercent:%f%% | UsedPercent=%f;%f;0;100", total, free, v.UsedPercent, w, c)
+		fmt.Printf("Critical - Total:%vM, Free:%vM, UsedPercent:%f%% | UsedPercent=%f;%f;0;100\n", total, free, v.UsedPercent, w, c)
 		os.Exit(2)
 	} else {
-		fmt.Printf("Total:%vG, Free:%vG, UsedPercent:%f%% | UsedPercent=%f;%f;0;100", total, free, v.UsedPercent, w, c)
+		fmt.Printf("OK - Total:%vM, Free:%vM, UsedPercent:%f%% | UsedPercent=%f;%f;0;100\n", total, free, v.UsedPercent, w, c)
 		os.Exit(0)
 	}
 }
