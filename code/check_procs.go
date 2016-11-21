@@ -5,7 +5,7 @@ import "os"
 import "fmt"
 import "strconv"
 
-const MSG = "Procs-Status: %s - ProcsRunning:%d, ProcsBlocked:%d | procsRunning=%d;%d;0;0 ProcsBlocked=%d;%d;0;0\n"
+const MSG = "Procs-Status: %s - ProcsRunning:%d, ProcsBlocked:%d | procsRunning=%d;%d;0;0; ProcsBlocked=%d;%d;0;0\n"
 
 func main() {
 	argv := os.Args
