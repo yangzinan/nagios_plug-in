@@ -11,7 +11,7 @@ import (
 	"github.com/shirou/gopsutil/disk"
 )
 
-const MSG = "[%s]_IOStatus: %s - read(KB)/s=%d, write(KB)/s=%d | read=%d;%d;0;0; write=%d;%d;0;0;"
+const MSG = "[%s]_IOStatus: %s - read(KB)/s=%d, write(KB)/s=%d | read=%d;%d;0;0; write=%d;%d;0;0;\n"
 
 func main() {
 	argv := os.Args
