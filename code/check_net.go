@@ -11,7 +11,7 @@ import (
 	nnet "github.com/shirou/gopsutil/net"
 )
 
-const MSG = "[%s]_Status: %s - RecvBytes/s=%dKB/s, SendBytes/s=%dKB/s |　RecvBytes=%d;%d;0;0; SendBytes=%d;%d;0;0;"
+const MSG = "[%s]_Status: %s - RecvBytes/s=%dKB/s, SendBytes/s=%dKB/s |　RecvBytes=%d;%d;0;0; SendBytes=%d;%d;0;0;\n"
 
 func main() {
 	argv := os.Args
